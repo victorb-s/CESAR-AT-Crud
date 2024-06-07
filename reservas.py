@@ -64,7 +64,7 @@ def atualizarReserva(cpf_cliente, novo_cpf_cliente, novoCliente, novoRestaurante
 
     for reserva in reservas:
         if reserva['cpf_cliente'] == cpf_cliente:
-            if cpf_cliente != "":
+            if novo_cpf_cliente != "":
                 reserva['cpf_cliente'] = novo_cpf_cliente
             if novoCliente != "":
                 reserva['cliente'] = novoCliente
@@ -147,7 +147,7 @@ def moduloReservas():
             case 3:
                 cpf_cliente = input("CPF do cliente atual da reserva: ")
 
-                if temReserva(cliente):
+                if temReserva(cpf_cliente):
                     print("DADOS PARA ATUALIZAR (deixe vazio para manter a informação atual):")
                     novoCliente = input("Nome do novo cliente: ")
                     novo_cpf_cliente = input("Digite o CPF do novo cliente: ")
@@ -160,12 +160,12 @@ def moduloReservas():
                     print("Nenhuma reserva encontrada para este cliente.")
 
             case 4:
-                cliente = input("Digite o nome do cliente da reserva: ")
-                excluirReserva(cliente)
+                cpf_cliente = input("Digite o CPF do cliente da reserva: ")
+                excluirReserva(cpf_cliente)
 
             case 5:
-                cliente = input("Digite o nome do cliente da reserva: ")
-                buscarReserva(cliente)
+                cpf_cliente = input("Digite o CPF do cliente da reserva: ")
+                buscarReserva(cpf_cliente)
 
             case 6:
                 print("VOLTANDO AO MENU ANTERIOR...\n")

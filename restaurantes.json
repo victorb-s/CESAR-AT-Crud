@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "nomeRestaurante": "Burger Queen",
+        "notaRest": 5.0,
+        "enderecoRest": "recife",
+        "telefoneRest": "1234556778",
+        "mesasRest": 30,
+        "horariosFuncionamento": "24h",
+        "cardapio": "alface\n\t\t\t\ttomate\n\t\t\t\tcebola"
+    }
+]
